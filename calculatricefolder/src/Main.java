@@ -13,7 +13,9 @@ public class Main{
                         "3-MULTIPLICATION\n"+
                         "4-DIVISION\n"+
                         "5-RACINE CARRE\n"+
+                        "6-FACTORIELLE\n"+
                         "6-QUITTER\n"+
+         
                         "--------ENTRER VOTRE  CHOIX :");
         choix=scanner.nextInt();
     }
@@ -62,6 +64,20 @@ public class Main{
             System.out.println("la racine carree de "+ nmbr +  " = "+Math.sqrt(nmbr));
         }
     }
+    public static void factorielle(){
+        int i,fact=1;
+        System.out.printf("entrer nombre = ");
+        a=scanner.nextInt();
+        if(a<0){
+            System.out.println("IMPOSSIBLE pour les nombres negatives");
+        }else{
+            for(i=1;i<=a;i++){
+                fact=fact*i;
+            }
+            System.out.println("Le factorielle de "+a+ " = "+fact);
+        }
+
+    }
 
     public static void main(String[] args) {
         do {
@@ -82,7 +98,10 @@ public class Main{
                 case 5:
                     racinecarree();
                     break;
-                case 5:
+                case 6:
+                    factorielle();
+                    break;
+                case 7:
                     System.out.println("MERCI D'UTILISER LA CALCULATRICE A BIENTOT");
                     break;
                 default:
@@ -90,7 +109,7 @@ public class Main{
                     break;
 
             }
-        } while (choix !=5);
+        } while (choix !=7);
         scanner.close();
     }
 }
