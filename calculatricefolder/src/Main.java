@@ -10,7 +10,8 @@ public class Main{
         System.out.print("-------------MENU----------------\n"+
                         "1-ADDITION\n"+
                         "2-SOUSTRACTION\n"+
-                        "3-QUITTER\n"+
+                        "3-MULTIPLICATION\n"+
+                        "4-QUITTER\n"+
                         "--------ENTRER VOTRE  CHOIX :");
         choix=scanner.nextInt();
     }
@@ -30,6 +31,14 @@ public class Main{
         b = scanner.nextDouble();
         System.out.println("la soustraction a-b =" + (a-b));
     }
+    
+    public static void multiplication(){
+        System.out.print("entrer a :");
+        a = scanner.nextDouble();
+        System.out.print("entrer b :");
+        b = scanner.nextDouble();
+        System.out.println("la multiplication a*b =" + (a*b));
+    }
 
     public static void main(String[] args) {
         do {
@@ -44,9 +53,12 @@ public class Main{
                 case 3:
                     System.out.println("MERCI D'UTILISER LA CALCULATRICE A BIENTOT");
                     break;
+                default:
+                    System.out.println("CHOIX INVALIDE RESSAYER");
+                    break;
 
             }
-        } while (choix !=3);
+        } while (choix !=4);
         scanner.close();
     }
 }
