@@ -12,7 +12,8 @@ public class Main{
                         "2-SOUSTRACTION\n"+
                         "3-MULTIPLICATION\n"+
                         "4-DIVISION\n"+
-                        "5-QUITTER\n"+
+                        "5-RACINE CARRE\n"+
+                        "6-QUITTER\n"+
                         "--------ENTRER VOTRE  CHOIX :");
         choix=scanner.nextInt();
     }
@@ -51,6 +52,16 @@ public class Main{
         }else
             System.out.println("la division a/b =" +(a/b));
     }
+    public static void racinecarree(){
+        double nmbr;
+        System.out.printf("entrer nombre = ");
+        nmbr=scanner.nextDouble();
+        if(nmbr<0){
+            System.out.println("la racine carree d'un nombre negative est impossible ");
+        }else{
+            System.out.println("la racine carree de "+ nmbr +  " = "+Math.sqrt(nmbr));
+        }
+    }
 
     public static void main(String[] args) {
         do {
@@ -69,6 +80,9 @@ public class Main{
                     division();
                     break;
                 case 5:
+                    racinecarree();
+                    break;
+                case 5:
                     System.out.println("MERCI D'UTILISER LA CALCULATRICE A BIENTOT");
                     break;
                 default:
@@ -76,7 +90,7 @@ public class Main{
                     break;
 
             }
-        } while (choix !=4);
+        } while (choix !=5);
         scanner.close();
     }
 }
