@@ -12,9 +12,10 @@ public class Main{
                         "2-SOUSTRACTION\n"+
                         "3-MULTIPLICATION\n"+
                         "4-DIVISION\n"+
-                        "5-RACINE CARRE\n"+
-                        "6-FACTORIELLE\n"+
-                        "6-QUITTER\n"+
+                        "5-PUISSANCE\n"+
+                        "6-RACINE CARRE\n"+
+                        "7-FACTORIELLE\n"+
+                        "8-QUITTER\n"+
          
                         "--------ENTRER VOTRE  CHOIX :");
         choix=scanner.nextInt();
@@ -53,6 +54,13 @@ public class Main{
             System.out.println("la division par 0 est impossible");
         }else
             System.out.println("la division a/b =" +(a/b));
+    }
+    public static void puissance(int base,int exposant){
+        System.out.print("entrer base :");
+        base=scanner.nextInt();
+        System.out.print("entrer exposant :");
+        exposant=scanner.nextInt();
+        System.out.println(base + "  a la puissance  " + exposant + "  = " + Math.pow(base,exposant));
     }
     public static void racinecarree(){
         double nmbr;
@@ -96,12 +104,15 @@ public class Main{
                     division();
                     break;
                 case 5:
-                    racinecarree();
+                    puissance();
                     break;
                 case 6:
-                    factorielle();
+                    racinecarree();
                     break;
                 case 7:
+                    factorielle();
+                    break;
+                case 8:
                     System.out.println("MERCI D'UTILISER LA CALCULATRICE A BIENTOT");
                     break;
                 default:
@@ -109,7 +120,7 @@ public class Main{
                     break;
 
             }
-        } while (choix !=7);
+        } while (choix !=8);
         scanner.close();
     }
 }
